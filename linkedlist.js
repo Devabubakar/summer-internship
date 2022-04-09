@@ -124,9 +124,7 @@ class LinkedList {
 
       return this
 
-       //1 -> 2 -> 3
-
-      // 1 -> 2 -> 3 -> 4
+       
    }
 
    reverse(){
@@ -140,7 +138,22 @@ class LinkedList {
         for(let i = 0 ; i < this.length; i++){
            next = node.next; 
            node.next = prev; 
+           /*
+           first step is to change direction of pointers 
+          node  next
+           1 ->  2 - >  3 - >  4 
+    --------------------------------------
+         node  prev,
+               next
+           1 -> 2 -> 3 -> 4
+    ---------------------------------------
+                node,
+                prev,
+          next  next = node.next
+           1 <- 2 -> 3 - > 4
+        Repeat 
 
+           */
            prev = node; 
            node = next
        }

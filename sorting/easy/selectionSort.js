@@ -32,4 +32,4 @@ function sort(arr){
     return arr
 }
 
-console.log(sort([5,4,3,2,1]))
+console.log(sort([1,2,36,3,27,8,5]))

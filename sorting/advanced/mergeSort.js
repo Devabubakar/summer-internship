@@ -37,6 +37,7 @@ const merge = (arr1,arr2) => {
 
     return result
 }
+console.log(merge([4,2,3],[55,6,7]))
 
 
 const mergeSort = (arr) => {

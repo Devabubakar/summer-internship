@@ -20,3 +20,4 @@ function sort(arr){
 }
 
 console.log(sort([2,3,1,4,56,7,1]))
+

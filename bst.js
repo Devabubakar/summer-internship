@@ -67,7 +67,7 @@ class BST {
     }
 
     //traverses siblings first , then children
-    bsf(val){ 
+    bsf(){ 
         if(!this.root) return undefined; 
 
         let data = []
@@ -84,6 +84,44 @@ class BST {
 
         return data
     }
+
+
+    ///depth first search , traverses the children first then the sibling s
+    //preorder - returns as it's traversing
+    dfs(){
+        if(!this.root) return undefined
+        let data = []
+        
+        const traverse = (node) => { 
+
+            //this is for preorder - for post order we first traverse then push
+
+            data.push(node)
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+
+            /*post order
+            
+            if(node.left) traverse(node.left)
+            if(node.right) traverse(node.right)
+            data.push(node)
+
+
+
+            inorder 
+            if(node.left) traverse(node.left)
+             data.push(node)
+            if(node.right) traverse(node.right)
+           
+            
+            */
+
+            
+
+        }
+         traverse(this.root)
+         return data
+    }
 }
 
 let bst = new BST(); 
@@ -92,4 +130,4 @@ bst.insert(14)
 bst.insert(12)
 bst.insert(7)
 
-console.log(bst.bsf())
+console.log(bst.dfs())
